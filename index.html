@@ -8,51 +8,136 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="header">
-    <div class="logo">🍣 PiRo</div>
-    <nav class="nav">
-      <ul class="nav-list">
-        <li><a href="#" class="nav-link">Увійти</a></li>
-        <li><a href="#" class="nav-link">Роли</a></li>
-        <li><a href="#" class="nav-link">Піца</a></li>
-        <li><a href="#" class="nav-link">Комбо</a></li>
-        <li><a href="#" class="nav-link">Про нас</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main class="main-content">
-    <section class="hero">
-      <h1>Ласкаво просимо до PiRo</h1>
-      <p>Роли та Піца з доставкою додому</p>
-      <a href="#menu" class="btn-order">Замовити зараз</a>
-    </section>
-    <section class="menu-section" id="menu">
-      <h2 class="menu-title">Меню</h2>
-      <div class="menu-cards">
-        <div class="menu-card pizza-card">
-          <img src="image/pizza.png" alt="Піца" class="menu-img">
-          <h3>Піца</h3>
-          <p>Соковита піца з найкращими інгредієнтами та сиром.</p>
-          <a href="#" class="btn-menu">Детальніше</a>
+    <div class="site-container">
+      <div class="ellipse-logo-bg"></div>
+      <header class="header">
+        <div class="logo">
+          <img src="image/logo.png" alt="PiRo" class="logo-img" />
         </div>
-        <div class="menu-card rolls-card">
-          <img src="image/rolls.png" alt="Роли" class="menu-img">
-          <h3>Роли</h3>
-          <p>Свіжі роли з рибою, овочами та авторськими соусами.</p>
-          <a href="#" class="btn-menu">Детальніше</a>
-        </div>
-        <div class="menu-card combo-card">
-          <img src="image/combo.png" alt="Комбо" class="menu-img">
-          <h3>Комбо</h3>
-          <p>Вигідні комбо: роли + піца для компанії чи сім'ї.</p>
-          <a href="#" class="btn-menu">Детальніше</a>
-        </div>
-      </div>
-    </section>
-    <!-- Додайте тут інші секції сайту -->
-  </main>
-  <footer class="footer">
-    <div class="footer-content">© 2025 PiRo. Всі права захищені.</div>
-  </footer>
-</body>
+        <nav class="nav">
+          <ul class="nav-list">
+            <li><a href="#hero" class="nav-link">Головна</a></li>
+            <li><a href="#menu" class="nav-link">Меню</a></li>
+            <li><a href="#delivery" class="nav-link">Доставка</a></li>
+            <li><a href="#about" class="nav-link">Про нас</a></li>
+            <li><a href="#contacts" class="nav-link">Контакти</a></li>
+          </ul>
+          <a href="#menu" class="btn-order">Замовити</a>
+        </nav>
+      </header>
+      <main class="main-content">
+        <section class="hero-section" id="hero">
+          <div class="hero-bg-block"></div>
+          <h1 class="hero-title">Смачна піца та роли з доставкою</h1>
+          <p class="hero-subtitle">Японська точність. Італійська пристрасть.</p>
+          <a href="#menu" class="btn-menu-main">Переглянути меню</a>
+        </section>
+        <section class="menu-block" id="menu">
+          <h2 class="menu-title">Меню</h2>
+          <div class="menu-cards">
+            <div class="menu-card">
+              <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=400&q=80" alt="Піца Маргарита" class="menu-img" />
+              <h3>Піца Маргарита</h3>
+              <p>Томатний соус, моцарела, базилік</p>
+              <div class="menu-price">199 грн</div>
+              <button class="btn-cart">До кошика</button>
+            </div>
+            <div class="menu-card">
+              <img src="https://images.unsplash.com/photo-1548365328-8b8490c0b2c1?auto=format&fit=crop&w=400&q=80" alt="Піца Пепероні" class="menu-img" />
+              <h3>Піца Пепероні</h3>
+              <p>Томатний соус, моцарела, пепероні</p>
+              <div class="menu-price">219 грн</div>
+              <button class="btn-cart">До кошика</button>
+            </div>
+            <div class="menu-card">
+              <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" alt="Рол Філадельфія" class="menu-img" />
+              <h3>Рол Філадельфія</h3>
+              <p>Лосось, крем-сир, огірок, рис, норі</p>
+              <div class="menu-price">179 грн</div>
+              <button class="btn-cart">До кошика</button>
+            </div>
+            <div class="menu-card">
+              <img src="https://images.unsplash.com/photo-1464306076886-debede1a7b8a?auto=format&fit=crop&w=400&q=80" alt="Рол Каліфорнія" class="menu-img" />
+              <h3>Рол Каліфорнія</h3>
+              <p>Краб, авокадо, огірок, ікра, рис, норі</p>
+              <div class="menu-price">169 грн</div>
+              <button class="btn-cart">До кошика</button>
+            </div>
+            <div class="menu-card">
+              <img src="https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=400&q=80" alt="Комбо-сет" class="menu-img" />
+              <h3>Комбо-сет</h3>
+              <p>Піца + роли, сет для компанії</p>
+              <div class="menu-price">349 грн</div>
+              <button class="btn-cart">До кошика</button>
+            </div>
+          </div>
+        </section>
+        <section class="promo-block">
+          <div class="promo-bg"></div>
+          <h2 class="promo-title">Акція! Замов 2 піци — отримай рол у подарунок!</h2>
+          <a href="#" class="btn-promo">Скористатись</a>
+        </section>
+        <section class="work-block" id="delivery">
+          <div class="work-col work-col-left">
+            <img src="image/order.png" alt="Замовлення" class="work-icon" />
+            <h3>Замовлення онлайн</h3>
+            <p>Оберіть улюблену страву та оформіть замовлення на сайті.</p>
+          </div>
+          <div class="work-col work-col-top-right">
+            <img src="image/cook.png" alt="Приготування" class="work-icon" />
+            <h3>Приготування</h3>
+            <p>Наші кухарі готують з найсвіжіших інгредієнтів.</p>
+          </div>
+          <div class="work-col work-col-bottom-right">
+            <img src="image/delivery.png" alt="Доставка" class="work-icon" />
+            <h3>Доставка</h3>
+            <p>Кур'єр швидко доставить замовлення прямо до ваших дверей.</p>
+          </div>
+        </section>
+        <section class="about-block" id="about">
+          <div class="about-bg"></div>
+          <h2 class="about-title">Чому обирають PiRo?</h2>
+          <div class="about-benefits">
+            <div class="benefit">
+              <img src="image/natural.png" alt="Натуральні інгредієнти" class="benefit-icon" />
+              <h3>Натуральні інгредієнти</h3>
+              <p>Використовуємо тільки якісні та свіжі продукти.</p>
+            </div>
+            <div class="benefit">
+              <img src="image/fast.png" alt="Швидка доставка" class="benefit-icon" />
+              <h3>Швидка доставка</h3>
+              <p>Доставляємо замовлення за 30 хвилин по місту.</p>
+            </div>
+            <div class="benefit">
+              <img src="image/japan.png" alt="Мікс кухонь" class="benefit-icon" />
+              <h3>Мікс японської та італійської кухні</h3>
+              <p>Поєднуємо японську акуратність та італійську пристрасть.</p>
+            </div>
+          </div>
+        </section>
+        <footer class="footer-block">
+          <div class="footer-bg"></div>
+          <div class="footer-logo">
+            <img src="image/logo.png" alt="PiRo" class="logo-img" />
+          </div>
+          <div class="footer-contacts">
+            <div><strong>Телефон:</strong> <a href="tel:+380631234567">+380 63 123 45 67</a></div>
+            <div><strong>Email:</strong> <a href="mailto:info@piro.ua">info@piro.ua</a></div>
+            <div><strong>Адреса:</strong> Київ, вул. Смачна, 5</div>
+          </div>
+          <div class="footer-social">
+            <a href="#" class="social-icon"><img src="image/instagram.png" alt="Instagram" /></a>
+            <a href="#" class="social-icon"><img src="image/telegram.png" alt="Telegram" /></a>
+            <a href="#" class="social-icon"><img src="image/tiktok.png" alt="TikTok" /></a>
+          </div>
+          <div class="footer-links">
+            <a href="#" class="footer-link">Політика конфіденційності</a>
+            <a href="#" class="footer-link">Умови доставки</a>
+            <a href="#" class="footer-link">Вакансії</a>
+          </div>
+          <div class="footer-copy">© 2025 PiRo. Всі права захищені.</div>
+        </footer>
+      </main>
+    </div>
+  </body>
 </html>
