@@ -176,15 +176,34 @@ body {
   font-family: 'M PLUS Rounded 1c', 'Poppins', cursive;
 }
 .menu-cards {
+  position: relative;
   display: flex;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.menu-cards-row {
+  display: flex;
+  flex-direction: row;
   gap: 24px;
-  margin-top: 24px;
-  flex-wrap: wrap;
-  justify-content: center;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 16px;
+  width: 100%;
+}
+.menu-cards-row::-webkit-scrollbar {
+  height: 10px;
+  background: #ffe0f7;
+  border-radius: 8px;
+}
+.menu-cards-row::-webkit-scrollbar-thumb {
+  background: #e539a7;
+  border-radius: 8px;
 }
 .menu-card {
-  width: 180px;
-  min-height: 340px;
+  min-width: 180px;
+  max-width: 180px;
   background: #FFFAF0;
   border-radius: 32px;
   box-shadow: 0 2px 12px #ffd6e0;
@@ -195,53 +214,52 @@ body {
   justify-content: flex-start;
   position: relative;
   font-family: 'Nunito', 'Inter', sans-serif;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.menu-card:hover {
+  transform: scale(1.06);
+  box-shadow: 0 8px 24px #e539a7;
 }
 .menu-img {
-  width: 90px;
-  height: 90px;
+  max-width: 100%;
+  max-height: 150px;
   object-fit: cover;
-  border-radius: 50%;
+  border-radius: 15px;
   margin-bottom: 12px;
   background: #fff;
   box-shadow: 0 2px 8px #ffd6e0;
   border: 2px solid #ffd600;
 }
-.menu-card h3 {
-  color: #e539a7;
-  font-size: 1.1rem;
-  margin-bottom: 8px;
-  font-weight: 700;
-  text-align: center;
-  font-family: 'M PLUS Rounded 1c', 'Poppins', cursive;
-}
-.menu-card p {
-  color: #d32f6f;
-  font-size: 0.95rem;
-  margin-bottom: 8px;
-  text-align: center;
-}
-.menu-price {
-  font-size: 1rem;
-  color: #e539a7;
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-.btn-cart {
+.menu-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   background: linear-gradient(90deg, #e539a7 70%, #ffd600 100%);
   color: #fff;
-  font-weight: 700;
-  font-size: 0.95rem;
-  padding: 8px 18px;
+  font-size: 2rem;
   border: none;
-  border-radius: 24px;
-  text-decoration: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
   box-shadow: 0 2px 8px #ffd6e0;
-  transition: background 0.2s, box-shadow 0.2s;
   cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+  z-index: 2;
 }
-.btn-cart:hover {
-  background: linear-gradient(90deg, #d32f6f 70%, #ffe082 100%);
-  box-shadow: 0 4px 16px #e539a7;
+.menu-arrow-left {
+  left: -60px;
+}
+.menu-arrow-right {
+  right: -60px;
+}
+.menu-arrow:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+@media (max-width: 1100px) {
+  .menu-cards {
+    max-width: 100vw;
+  }
 }
 
 .promo-block {
@@ -425,7 +443,7 @@ body {
 }
 
 /* Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&family=Poppins:wght@400;700&family=Nunito:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&family=Nunito:wght@400;700&display=swap');
 /* Сяючі дрібниці на фоні */
 .shine-bg {
   position: fixed;
