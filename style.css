@@ -426,3 +426,204 @@ body {
 
 /* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&family=Poppins:wght@400;700&family=Nunito:wght@400;700&display=swap');
+/* Сяючі дрібниці на фоні */
+.shine-bg {
+  position: fixed;
+  left: 0; top: 0; width: 100vw; height: 100vh;
+  pointer-events: none;
+  z-index: 0;
+}
+.shine-star, .shine-dot {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.3;
+  animation: shine-move 8s infinite linear alternate;
+}
+.shine-star {
+  width: 18px; height: 18px;
+  background: radial-gradient(circle, #ffb7d5 60%, #fff6fa 100%);
+  box-shadow: 0 0 16px #ffb7d5;
+}
+.shine-dot {
+  width: 10px; height: 10px;
+  background: radial-gradient(circle, #ffe0f7 60%, #fff 100%);
+  box-shadow: 0 0 8px #ffe0f7;
+}
+@keyframes shine-move {
+  0% { transform: translateY(0) scale(1); }
+  100% { transform: translateY(20px) scale(1.2); }
+}
+
+/* Кнопки — великі, круглі, з анімацією */
+.btn-order, .btn-menu-main, .btn-cart, .btn-promo {
+  border-radius: 32px;
+  font-family: 'M PLUS Rounded 1c', 'Poppins', cursive;
+  transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+}
+.btn-order:hover, .btn-menu-main:hover, .btn-cart:hover, .btn-promo:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 24px #e539a7;
+  background: linear-gradient(90deg, #ffd600 70%, #e539a7 100%);
+}
+
+/* Хіти продажу */
+.hits-block {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto 48px auto;
+  background: #FFFAF0;
+  border-radius: 32px;
+  box-shadow: 0 2px 12px #ffd6e0;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hits-title {
+  font-size: 1.3rem;
+  color: #e539a7;
+  font-weight: 700;
+  margin-bottom: 18px;
+  font-family: 'M PLUS Rounded 1c', 'Poppins', cursive;
+}
+.hits-cards {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+}
+.hits-card {
+  background: #fff6fa;
+  border-radius: 32px;
+  box-shadow: 0 2px 8px #ef9b9d44;
+  padding: 18px 12px;
+  width: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hits-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 8px #ffd6e0;
+}
+.hits-card h3 {
+  color: #e539a7;
+  font-size: 1rem;
+  margin-bottom: 6px;
+  font-weight: 700;
+  text-align: center;
+}
+.hits-card p {
+  color: #d32f6f;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+/* Огляди клієнтів */
+.reviews-block {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto 48px auto;
+  background: #FFFAF0;
+  border-radius: 32px;
+  box-shadow: 0 2px 12px #ffd6e0;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.reviews-title {
+  font-size: 1.3rem;
+  color: #e539a7;
+  font-weight: 700;
+  margin-bottom: 18px;
+  font-family: 'M PLUS Rounded 1c', 'Poppins', cursive;
+}
+.reviews-cards {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+}
+.review-card {
+  background: #fff6fa;
+  border-radius: 32px;
+  box-shadow: 0 2px 8px #ef9b9d44;
+  padding: 18px 12px;
+  width: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.review-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 8px;
+  box-shadow: 0 2px 8px #ffd6e0;
+}
+.review-rating {
+  color: #ffd600;
+  font-size: 1.2rem;
+  margin-bottom: 4px;
+}
+.review-card h3 {
+  color: #e539a7;
+  font-size: 1rem;
+  margin-bottom: 6px;
+  font-weight: 700;
+  text-align: center;
+}
+.review-card p {
+  color: #d32f6f;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+/* Факти */
+.facts-block {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto 48px auto;
+  background: #FFFAF0;
+  border-radius: 32px;
+  box-shadow: 0 2px 12px #ffd6e0;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.facts-title {
+  font-size: 1.3rem;
+  color: #e539a7;
+  font-weight: 700;
+  margin-bottom: 18px;
+  font-family: 'M PLUS Rounded 1c', 'Poppins', cursive;
+}
+.facts-cards {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+}
+.fact-card {
+  background: #fff6fa;
+  border-radius: 32px;
+  box-shadow: 0 2px 8px #ef9b9d44;
+  padding: 18px 12px;
+  width: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.fact-emoji {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+.fact-card p {
+  color: #d32f6f;
+  font-size: 0.95rem;
+  text-align: center;
+}
