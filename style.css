@@ -191,19 +191,19 @@ body {
   scroll-behavior: smooth;
   padding-bottom: 16px;
   width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  /* Додаємо transform для JS */
+  transition: transform 0.5s cubic-bezier(.7,.2,.3,1);
+  scrollbar-width: none; /* Firefox */
 }
 .menu-cards-row::-webkit-scrollbar {
-  height: 10px;
-  background: #ffe0f7;
-  border-radius: 8px;
-}
-.menu-cards-row::-webkit-scrollbar-thumb {
-  background: #e539a7;
-  border-radius: 8px;
+  display: none; /* Chrome, Safari */
 }
 .menu-card {
   min-width: 180px;
   max-width: 180px;
+  box-sizing: border-box;
   background: #FFFAF0;
   border-radius: 32px;
   box-shadow: 0 2px 12px #ffd6e0;
@@ -215,6 +215,7 @@ body {
   position: relative;
   font-family: 'Nunito', 'Inter', sans-serif;
   transition: transform 0.2s, box-shadow 0.2s;
+  overflow: hidden;
 }
 .menu-card:hover {
   transform: scale(1.06);
@@ -245,12 +246,15 @@ body {
   cursor: pointer;
   transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
   z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .menu-arrow-left {
-  left: -60px;
+  left: 0;
 }
 .menu-arrow-right {
-  right: -60px;
+  right: 0;
 }
 .menu-arrow:disabled {
   opacity: 0.4;
