@@ -649,3 +649,101 @@ body {
   font-size: 0.95rem;
   text-align: center;
 }
+
+/* Кошик у хедері */
+.cart-container {
+  position: relative;
+  display: inline-block;
+}
+.btn-cart-header {
+  background: #fff;
+  border: none;
+  border-radius: 50px;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: box-shadow 0.2s;
+}
+.btn-cart-header:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+}
+.cart-icon {
+  width: 28px;
+  height: 28px;
+  margin-right: 8px;
+}
+.cart-count {
+  background: #ff4d4f;
+  color: #fff;
+  border-radius: 50%;
+  padding: 2px 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.cart-dropdown {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 110%;
+  min-width: 260px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+  z-index: 100;
+  padding: 16px 12px 12px 12px;
+}
+.cart-dropdown-title {
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+.cart-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 180px;
+  overflow-y: auto;
+}
+.cart-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+  margin-bottom: 6px;
+}
+.cart-list .cart-item-remove {
+  background: none;
+  border: none;
+  color: #ff4d4f;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 8px;
+}
+.cart-total {
+  font-weight: 600;
+  font-size: 16px;
+  margin-top: 10px;
+  text-align: right;
+}
+.cart-order-btn {
+  width: 100%;
+  background: #ffb800;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 0;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 12px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.cart-order-btn:hover {
+  background: #ff4d4f;
+}
+.cart-container:hover .cart-dropdown,
+.btn-cart-header:focus + .cart-dropdown {
+  display: block;
+}

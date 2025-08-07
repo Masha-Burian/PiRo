@@ -30,7 +30,17 @@
             <li><a href="#reviews" class="nav-link">Огляди</a></li>
             <li><a href="#about" class="nav-link">Про нас</a></li>
           </ul>
-          <a href="#menu" class="btn-order">Замовити</a>
+          <div class="cart-container">
+            <button class="btn-cart-header" id="cartBtn">
+              Кошик <span class="cart-count" id="cartCount">0</span>
+            </button>
+            <div class="cart-dropdown" id="cartDropdown">
+              <div class="cart-dropdown-title">Кошик</div>
+              <ul class="cart-list" id="cartList"></ul>
+              <div class="cart-total" id="cartTotal"></div>
+              <button class="cart-order-btn">Оформити замовлення</button>
+            </div>
+          </div>
         </nav>
       </header>
       <main class="main-content">
