@@ -2,9 +2,10 @@
 body {
   font-family: 'M PLUS Rounded 1c', 'Poppins', 'Nunito', 'Inter', Arial, sans-serif;
   margin: 0;
-  background: linear-gradient(120deg, #ed5658 20%,#f24455 35%, #e5203a 70%, #660f24 85%, #2b0013 100%);
+  background: radial-gradient(at 0% 30%, #f24455  20%, #e5203a  30%, #660f24 50%);
   color: #222;
 }
+
 
 /* Контейнер для всього сайту */
 .site-container {
@@ -85,21 +86,17 @@ body {
   box-shadow: 0 2px 12px #ffd6e0;
 }
 .btn-order {
-  background: linear-gradient(90deg, #e539a7 70%, #ffd600 100%);
-  color: #fff;
-  font-weight: 700;
+  background: linear-gradient(90deg, #fff 60%, #ffe0f7 100%);
+  color: #e539a7;
+  font-weight: 600;
   font-size: 1rem;
   padding: 10px 24px;
-  border: none;
-  border-radius: 32px;
+  border: 1.5px solid #ffb7d5;
+  border-radius: 24px;
   text-decoration: none;
-  box-shadow: 0 2px 8px rgba(229,57,167,0.12);
-  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 4px #ffe0f7;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
   cursor: pointer;
-}
-.btn-order:hover, .btn-order:focus {
-  background: linear-gradient(90deg, #d32f6f 70%, #ffe082 100%);
-  box-shadow: 0 4px 16px #ffd6e0;
 }
 
 .main-content {
@@ -656,23 +653,24 @@ body {
   display: inline-block;
 }
 .btn-cart-header {
-  background: #fff;
-  border: none;
-  border-radius: 50px;
+  background: linear-gradient(90deg, #fff 60%, #ffe0f7 100%);
+  color: #e539a7;
+  font-weight: 600;
+  font-size: 1rem;
   padding: 8px 16px;
+  border: 1.5px solid #ffb7d5;
+  border-radius: 24px;
+  text-decoration: none;
+  box-shadow: 0 1px 4px #ffe0f7;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
   display: flex;
   align-items: center;
   cursor: pointer;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  transition: box-shadow 0.2s;
 }
-.btn-cart-header:hover {
-  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
-}
-.cart-icon {
-  width: 28px;
-  height: 28px;
-  margin-right: 8px;
+.btn-cart-header:hover, .btn-cart-header:focus {
+  background: linear-gradient(90deg, #e539a7 70%, #ffe082 100%);
+  color: #fff;
+  box-shadow: 0 2px 12px #ffd6e0;
 }
 .cart-count {
   background: #ff4d4f;
@@ -681,6 +679,7 @@ body {
   padding: 2px 8px;
   font-size: 14px;
   font-weight: 600;
+  margin-left: 8px;
 }
 .cart-dropdown {
   display: none;
@@ -746,4 +745,11 @@ body {
 .cart-container:hover .cart-dropdown,
 .btn-cart-header:focus + .cart-dropdown {
   display: block;
+}
+
+.btn-order:hover, .btn-order:focus {
+  background: linear-gradient(90deg, #e539a7 70%, #ffe082 100%) !important;
+  color: #fff !important;
+  box-shadow: 0 2px 12px #ffd6e0 !important;
+  transform: scale(1.08) !important;
 }
