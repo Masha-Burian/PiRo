@@ -15,10 +15,8 @@ function updateMenuArrows() {
 function scrollMenu(direction) {
   scrollIndex += direction;
   scrollIndex = Math.max(0, Math.min(scrollIndex, totalCards - visibleCards));
-  const targetCard = menuCardsRow.children[scrollIndex];
-  if (targetCard) {
-    targetCard.scrollIntoView({behavior: 'smooth', inline: 'start'});
-  }
+  const targetScroll = cardWidth * scrollIndex;
+  menuCardsRow.scrollTo({ left: targetScroll, behavior: 'smooth' });
   updateMenuArrows();
 }
 leftArrow.addEventListener('click', () => scrollMenu(-1));
