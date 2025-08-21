@@ -20,7 +20,7 @@
       <div class="ellipse-logo-bg"></div>
       <header class="header">
         <div class="logo">
-          <img src="url('image/logo.png')" alt="PiRo" class="logo-img" />
+          <img src="image/logo.png" alt="PiRo" class="logo-img" />
         </div>
         <nav class="nav">
           <ul class="nav-list">
@@ -50,11 +50,12 @@
           <p class="hero-subtitle">Японська точність. Італійська пристрасть.</p>
           <a href="#menu" class="btn-menu-main">Переглянути меню</a>
         </section>
-        <section class="menu-block" id="menu">
-          <h2 class="menu-title">Меню</h2>
-          <div class="menu-cards">
-            <button class="menu-arrow menu-arrow-left" aria-label="Попередні позиції">&#8592;</button>
-            <div class="menu-cards-row">
+        <div class="menu-section-wrapper">
+          <button class="menu-arrow menu-arrow-left" aria-label="Попередні позиції">&#8592;</button>
+          <section class="menu-block" id="menu">
+            <h2 class="menu-title">Меню</h2>
+            <div class="menu-cards">
+              <div class="menu-cards-row">
               <div class="menu-card">
                 <img src="https://mr-sushi.com.ua/files/products/izobrazhenie_viber_2022-02-13_20-24-05-445.500x500.jpg?1c719c2d69bdbfd536706af56a94b4ed" alt="Піца Маргарита" class="menu-img" style="width:200px; height:150px; object-fit:cover; aspect-ratio:4/3;" />
                 <h3>Піца Маргарита</h3>
@@ -182,9 +183,9 @@
                 <button class="btn-cart">До кошика</button>
               </div>
             </div>
-            <button class="menu-arrow menu-arrow-right" aria-label="Наступні позиції">&#8594;</button>
-          </div>
-        </section>
+          </section>
+          <button class="menu-arrow menu-arrow-right" aria-label="Наступні позиції">&#8594;</button>
+        </div>
         <section class="promo-block">
           <div class="promo-bg"></div>
           <h2 class="promo-title">Ми знаходимося тут:</h2>

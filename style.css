@@ -153,23 +153,33 @@ body {
   box-shadow: 0 4px 16px #ffd6e0;
 }
 
+.menu-section-wrapper {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto 48px auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
 .menu-block {
   width: 100%;
-  max-width: 1050px;
-  margin: 0 auto 48px auto;
+  max-width: 80%;
   background: #EF9B9D;
   border-radius: 48px;
-  padding: 40px 24px;
+  padding: 0px 0px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow-y: visible
+  overflow: hidden;
 }
 .menu-title {
   font-size: 1.7rem;
   color: #e539a7;
-  margin-bottom: 24px;
+  margin-bottom: 0px;
   font-weight: 700;
   letter-spacing: 1px;
   text-align: center;
@@ -179,29 +189,41 @@ body {
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;
-  max-width: calc(5 * 180px + 4 * 24px);
+  justify-content: space-between;
+  max-width: calc(5 * 180px + 4 * 24px + 160px);
   width: 100%;
   margin: 0 auto;
+  gap: 12px;
   overflow: visible;
-  gap: 48px;
 }
 .menu-cards-row {
   display: flex;
   flex-direction: row;
-  gap: 24px;
-  flex: 0 0 auto;
-  width: 100%;
+  gap: 18px;
+  flex: 1 1 auto;
+  width: calc(100% - 160px);
   max-width: calc(5 * 180px + 4 * 24px);
-  overflow: auto;
-  overflow-y:visible ;  /* чтобы не обрезалось свечение */
+  overflow-x: auto;
+  overflow-y: visible;
   scroll-behavior: smooth;
-  padding-bottom: 16px;
+  padding: 38px;
   margin: 0 auto;
-  padding-right: 0;
   transition: transform 0.5s cubic-bezier(.7,.2,.3,1);
   scrollbar-width: none;
   scroll-snap-type: x mandatory;
+  position: relative;
+  -webkit-mask-image: linear-gradient(90deg, 
+    transparent 0%,
+    black 5%,
+    black 95%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(90deg, 
+    transparent 0%,
+    black 5%,
+    black 95%,
+    transparent 100%
+  );
 }
 
 .menu-cards-row::-webkit-scrollbar {
@@ -221,13 +243,16 @@ body {
   justify-content: flex-start;
   position: relative;
   font-family: 'Montserrat', 'M PLUS Rounded 1c', 'Nunito', 'Inter', sans-serif;
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: all 0.3s ease;
   overflow: visible;
   scroll-snap-align: start;
+  margin: 8px;
+  transform-origin: center center;
 }
 .menu-card:hover {
   transform: scale(1.06);
   box-shadow: 0 8px 24px #e539a7;
+  z-index: 1;
 }
 .menu-img {
   max-width: 100%;
@@ -240,7 +265,7 @@ body {
   border: 2px solid #ffd600;
 }
 .menu-arrow {
-  position: static;
+  flex: 0 0 56px;
   background: linear-gradient(135deg, #ffd600 60%, #e539a7 100%);
   color: #fff;
   font-size: 2.2rem;
@@ -251,12 +276,13 @@ body {
   box-shadow: 0 4px 16px #ffd6e0;
   cursor: pointer;
   transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
-  z-index: 2;
+  z-index: 5;
   display: flex;
   align-items: center;
   justify-content: center;
   outline: 3px solid #fff6fa;
   outline-offset: -4px;
+  align-self: center;
 }
 .menu-arrow:hover:not(:disabled) {
   background: linear-gradient(135deg, #e539a7 60%, #ffd600 100%);
