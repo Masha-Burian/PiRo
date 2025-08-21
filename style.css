@@ -320,6 +320,22 @@ body {
   box-shadow: 0 4px 16px #ffd6e0;
 }
 
+.promo-address {
+  color: #e539a7;
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  text-align: center;
+  font-family: 'Montserrat', 'M PLUS Rounded 1c', cursive;
+}
+.promo-map iframe {
+  border-radius: 24px;
+  width: 100%;
+  height: 320px;
+  border: none;
+  display: block;
+}
+
 .work-block {
   width: 100%;
   max-width: 900px;
@@ -391,9 +407,22 @@ body {
   font-family: 'Montserrat', 'M PLUS Rounded 1c', 'Nunito', 'Inter', sans-serif;
 }
 .benefit-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  margin-bottom: 12px;
+}
+.benefit-icon img {
   width: 48px;
   height: 48px;
-  margin-bottom: 12px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 2px 8px #ffd6e0;
+  padding: 8px;
+  object-fit: contain;
+  display: block;
 }
 .benefit h3 {
   color: #e539a7;
