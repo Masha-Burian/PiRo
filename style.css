@@ -493,10 +493,18 @@ body {
   margin-bottom: 16px;
 }
 .social-icon img {
-  width: 32px;
-  height: 32px;
+  display: none;
+}
+.social-icon svg {
   border-radius: 50%;
   box-shadow: 0 2px 8px #ffd6e0;
+  transition: transform 0.2s, box-shadow 0.2s, filter 0.2s;
+  display: block;
+}
+.social-icon:hover svg {
+  transform: scale(1.12) rotate(-8deg);
+  box-shadow: 0 8px 24px #e539a7;
+  filter: brightness(1.15) drop-shadow(0 0 8px #ffd60088);
 }
 .footer-links {
   display: flex;
