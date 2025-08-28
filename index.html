@@ -367,6 +367,37 @@
         </footer>
       </main>
     </div>
+
+    <!-- Order modal -->
+    <div id="orderModal" class="modal-overlay" aria-hidden="true">
+      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="orderModalTitle">
+        <button class="modal-close" data-dismiss="modal" aria-label="Close">✕</button>
+        <h3 id="orderModalTitle">Оформити замовлення</h3>
+        <form id="orderForm">
+          <label class="modal-label">Ім'я
+            <input type="text" name="name" id="orderName" required />
+          </label>
+          <label class="modal-label">Телефон
+            <input type="tel" name="phone" id="orderPhone" required />
+          </label>
+          <label class="modal-label">Адреса
+            <textarea name="address" id="orderAddress" rows="2" required></textarea>
+          </label>
+          <button type="submit" class="btn-promo">Оформити</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Thank you modal -->
+    <div id="thankModal" class="modal-overlay" aria-hidden="true">
+      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="thankModalTitle">
+        <button class="modal-close" data-dismiss="modal" aria-label="Close">✕</button>
+        <h3 id="thankModalTitle">Дякуємо за замовлення!</h3>
+        <p>Ваше замовлення отримано. Ми зв'яжемося з вами найближчим часом.</p>
+        <button class="btn-promo" id="thankClose">Закрити</button>
+      </div>
+    </div>
+
     <script src="script.js"></script>
   </body>
 </html>

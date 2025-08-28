@@ -575,7 +575,7 @@ body {
 .hits-block {
   width: 100%;
   max-width: 900px;
-  margin: 0 auto 48px auto;
+  margin: 0 auto 48px авто;
   background: #FFFAF0;
   border-radius: 32px;
   box-shadow: 0 2px 12px #ffd6e0;
@@ -632,7 +632,7 @@ body {
 .reviews-block {
   width: 100%;
   max-width: 900px;
-  margin: 0 auto 48px auto;
+  margin: 0 auto 48px авто;
   background: #FFFAF0;
   border-radius: 32px;
   box-shadow: 0 2px 12px #ffd6e0;
@@ -694,7 +694,7 @@ body {
 .facts-block {
   width: 100%;
   max-width: 900px;
-  margin: 0 auto 48px auto;
+  margin: 0 auto 48px авто;
   background: #FFFAF0;
   border-radius: 32px;
   box-shadow: 0 2px 12px #ffd6e0;
@@ -841,4 +841,109 @@ body {
   color: #fff !important;
   box-shadow: 0 2px 12px #ffd6e0 !important;
   transform: scale(1.08) !important;
+}
+
+.btn-cart {
+  background: linear-gradient(90deg, #ffd600 60%, #e539a7 100%);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.98rem;
+  padding: 9px 18px;
+  border: none;
+  border-radius: 32px;
+  box-shadow: 0 2px 8px #ffd6e0;
+  margin-top: 10px;
+  margin-bottom: 0;
+  cursor: pointer;
+  transition: background 0.22s, box-shadow 0.22s, transform 0.18s;
+  letter-spacing: 0.5px;
+  outline: 2px solid #fff6fa;
+  outline-offset: -4px;
+  position: relative;
+  z-index: 2;
+}
+.btn-cart:hover, .btn-cart:focus {
+  background: linear-gradient(90deg, #e539a7 70%, #ffd600 100%);
+  color: #fff;
+  box-shadow: 0 8px 24px #e539a7;
+  transform: scale(1.08) rotate(-2deg);
+}
+
+/* Модальні вікна */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.45);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.22s ease;
+  z-index: 200;
+}
+.modal-overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+.modal {
+  background: #fff;
+  color: #222;
+  padding: 20px;
+  border-radius: 16px;
+  max-width: 420px;
+  width: calc(100% - 48px);
+  box-shadow: 0 12px 40px rgba(229,57,167,0.12);
+  text-align: left;
+  position: relative;
+}
+.modal h3 {
+  color: #e539a7;
+  margin: 0 0 12px 0;
+  font-family: 'Montserrat', 'M PLUS Rounded 1c', cursive;
+}
+.modal p { margin-bottom: 12px; color: #444; }
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: #333;
+}
+.modal-label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #444;
+  font-size: 0.95rem;
+}
+.modal-label input,
+.modal-label textarea {
+  display: block;
+  width: 93%;
+  margin-top: 6px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1.5px solid #ffd6e0;
+  box-shadow: inset 0 1px 0 #fff6f8;
+  outline: none;
+  font-size: 1rem;
+  font-family: inherit;
+}
+.modal-label input:focus,
+.modal-label textarea:focus {
+  border-color: #e539a7;
+  box-shadow: 0 4px 12px rgba(229,57,167,0.12);
+}
+.modal .btn-promo {
+  width: 100%;
+  margin-top: 12px;
+  border-radius: 12px;
+}
+@media (max-width: 480px) {
+  .modal { padding: 16px; }
+  .modal h3 { font-size: 1.05rem; }
 }

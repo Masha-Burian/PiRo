@@ -80,3 +80,83 @@ menuCardsRow.addEventListener('click', function(e) {
     addToCart(name, price);
   }
 });
+
+// Відкриття модального вікна оформлення/подяки
+const cartOrderBtn = document.querySelector('.cart-order-btn');
+const orderModal = document.getElementById('orderModal');
+const thankModal = document.getElementById('thankModal');
+const orderForm = document.getElementById('orderForm');
+
+function openModal(modal) {
+  if (!modal) return;
+  modal.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeModal(modal) {
+  if (!modal) return;
+  modal.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+// Відкрити модал, коли користувач натискає "Оформити замовлення" у кошику
+if (cartOrderBtn) {
+  cartOrderBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    openModal(orderModal);
+  });
+}
+
+// Закриття по кнопках та клік на фон
+document.addEventListener('click', function(e) {
+  // закрити при натисканні на кнопку закриття
+  if (e.target.matches('.modal-close') || e.target.matches('#thankClose')) {
+    const modal = e.target.closest('.modal-overlay');
+    closeModal(modal);
+  }
+  // клік по фону закриває
+  if (e.target.classList && e.target.classList.contains('modal-overlay')) {
+    closeModal(e.target);
+  }
+});
+
+// Esc для закриття
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    if (orderModal && orderModal.classList.contains('open')) closeModal(orderModal);
+    if (thankModal && thankModal.classList.contains('open')) closeModal(thankModal);
+  }
+});
+
+// Обробка відправки форми
+if (orderForm) {
+  orderForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const name = document.getElementById('orderName').value.trim();
+    const phone = document.getElementById('orderPhone').value.trim();
+    const address = document.getElementById('orderAddress').value.trim();
+
+    // Проста валідація
+    if (!name || !phone || !address) {
+      // підсвітити порожні поля
+      if (!name) document.getElementById('orderName').focus();
+      else if (!phone) document.getElementById('orderPhone').focus();
+      else document.getElementById('orderAddress').focus();
+      return;
+    }
+
+    // Закриваємо форму замовлення та відкриваємо подяку
+    closeModal(orderModal);
+    openModal(thankModal);
+
+    // Очистити форму
+    orderForm.reset();
+
+    // За бажанням: очистити кошик
+    cart = [];
+    updateCart();
+  });
+}
+
+// Кнопка закриття у вікні подяки
+const thankCloseBtn = document.getElementById('thankClose');
+if (thankCloseBtn) thankCloseBtn.addEventListener('click', function() { closeModal(thankModal); });
